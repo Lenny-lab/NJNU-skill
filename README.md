@@ -1,4 +1,4 @@
-# 南京师范大学校园生活指南 AI Skill
+# 南京师范大学校园生活指南 Skill
 
 ![version](https://img.shields.io/badge/version-1.0.0-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
