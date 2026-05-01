@@ -1,165 +1,219 @@
 ---
-name: njnu-campus-writing
-description: Use when the user wants copy, prompts, microsite text, campus test questions, result cards, or narrative content written in a Nanjing Normal University / NNU / 南师大 voice. Especially useful for 随园, 仙林, NSTI-style scene writing, campus introduction pages, and turning rough ideas into grounded campus language without sounding generic or overly AI-written.
+name: 南师大校园语境写作
+description: 当用户希望生成、润色或重写带有南京师范大学校园语境的中文内容时使用本 skill，尤其适用于随园、仙林、紫金三校区相关文案、NSTI 风格题面、结果卡、项目说明、校园介绍页，以及降低空泛 AI 味、保留用户原创想法主导权的写作任务。
 ---
 
-# NJNU Campus Writing
+# 南师大校园语境写作 Skill
 
-Use this skill when the task is not just "write Chinese," but "write like it belongs to a real South Normal campus context."
+这个 skill 的用途，不是简单把中文写通顺，而是把内容写得更像真实发生在南京师范大学校园里的表达。
 
-The aim is to keep the user's idea at the center, then refine it into language that feels specific, lived-in, restrained, and readable.
+它既可以用来写文案，也可以用来做“知识型润色”：
 
-## What this skill is for
+- 帮用户把原始创意整理成更自然的校园表达
+- 把抽象概念改写成贴近校园生活的场景语言
+- 把南师大的校区差异、生活信息、常用服务信息纳入写作背景
+- 在项目叙事中清楚区分“用户提出创意”与“AI 负责润色和落地”
 
-- Writing or revising South Normal campus copy
-- Turning rough ideas into more natural campus-facing wording
-- Building NSTI-like scene prompts, type labels, result cards, or intro pages
-- Writing "about campus" or "about Suiyuan" pages
-- Reducing generic AI tone in student-project writing
-- Localizing a general concept into a 南师大 / 随园 / 仙林 setting
+## 适用任务
 
-## Core stance
+- 校园介绍页
+- 随园 / 仙林 / 紫金相关文案
+- NSTI 风格题面、结果卡、说明页
+- 项目申报书、比赛案例说明、成果展示材料
+- 社团 / 活动 / 招新 / 校园内容策划
+- 提示词整理、知识卡片整理、生活信息型说明文本
 
-- Treat the user as the source of the idea.
-- Treat the model as the refiner of structure, cadence, and wording.
-- Prefer observed campus life over abstract slogans.
-- Keep warmth, but do not drift into empty lyricism.
+## 核心原则
 
-If the user says the idea, concept, or question design came from them, preserve that. Do not rewrite the story so that AI appears to be the originator.
+### 1. 用户是创意提出者
 
-## Workflow
+如果用户已经说明：
 
-1. Identify the artifact type.
-   - Hero copy
-   - Intro paragraph
-   - About page
-   - Campus test question
-   - Result card
-   - Project description
-   - Event or activity copy
+- 选题是自己观察出来的
+- 场景是自己想到的
+- 题目构想是自己提出的
+- 项目路径是自己先想明白的
 
-2. Identify the campus scope.
-   - 随园
-   - 仙林
-   - Library / self-study
-   - Commute
-   - Student groups
-   - Group work
-   - Daily social scenes
+那就必须保留这一点。不能把文本改写成“AI 替用户完成了核心创意”。
 
-3. Anchor each paragraph or question in one visible scene.
-   Good writing here usually comes from one clear place, one clear behavior, and one clear feeling.
+更合适的表述是：
 
-4. Rewrite from abstraction to observation.
-   Replace broad words like "growth," "youth," or "healing" with things a student can actually see, hear, or do.
+- 用户负责提出问题意识、创意方向和场景框架
+- AI / Agent 工具负责整理、润色、扩写、提示词生成、页面实现与迭代优化
 
-5. Tighten cadence.
-   Keep sentences short to medium length. Let the writing breathe. Avoid a continuous stream of polished slogans.
+### 2. 校园感要落在生活，不要飘在空中
 
-6. Run a final red-line check.
+优先写学生真的会接触到的内容：
 
-## Style rules
+- 上课、赶路、等车、自习、回宿舍
+- 群聊、小组合作、社团招新、临时改计划
+- 图书馆、草地、回廊、坡道、路口、食堂、宿舍楼、校车站点
 
-- Prefer concrete campus nouns:
-  - 草地
-  - 回廊
-  - 坡道
-  - 图书馆
-  - 校车
-  - 群聊
-  - 招新点
-  - 路口
-  - 夜里回宿舍的路
+不要只写：
 
-- Prefer behavior over identity labels.
-  - Better: "你会先把时间排出来，再慢慢推进"
-  - Not as good: "你是一个高执行力人格"
+- 青春
+- 成长
+- 治愈
+- 灵魂
+- 热爱
 
-- Prefer one real scene per sentence cluster.
-  Do not stack too many landmarks in one breath just to prove local familiarity.
+这些词不是完全不能用，而是必须有场景支撑。
 
-- Allow light emotional color, but stay grounded.
-  The tone can be warm, but it should still sound like someone who has actually been there.
+### 3. 三校区要分开写
 
-- Write as if it could be spoken by a thoughtful student, not a marketing department.
+本 skill 默认覆盖三个校区语境：
 
-## Red lines
+- 随园
+- 仙林
+- 紫金
 
-- Do not write as if representing 南京师范大学 officially.
-- Do not imply diagnosis, certification, selection, or screening.
-- Do not overuse grand words such as "灵魂底色," "治愈," or "青春答卷" unless the user explicitly wants that register.
-- Do not make every line poetic.
-- Do not explain campus feeling in overly theoretical language.
+不要把三个校区写成同一种气质。
 
-## Common task patterns
+一般来说：
 
-### 1. Campus intro copy
+- 随园更适合承接气质、人文感、树影、回廊、老楼、慢下来的时间感
+- 仙林更适合承接课程节奏、通勤、自习、社交、小组协作、学生生活密度
+- 紫金更适合承接专业性、实践性、功能性和现实任务感
 
-Start from a recognizable student experience, then widen slightly.
+具体写作时需要按需读取：
 
-Useful pattern:
+- `references/知识库总览.md`
+- `references/三校区语境.md`
+- `references/校园生活信息.md`
 
-- First line: what the student notices first
-- Second line: what kind of pace or atmosphere that implies
-- Third line: why that matters to this project or page
+## 工作流
 
-### 2. About Suiyuan writing
+### 第一步：先判断文本类型
 
-Useful cues:
+先确认用户要写的是哪一类：
 
-- quiet before grandeur
-- old buildings, trees, corridors, slopes
-- not a fully packaged tourist guide
-- still a living campus, not a sealed historical set
+- 首页主文案
+- 校园介绍页
+- 题库说明
+- 测评题面
+- 结果卡
+- 项目说明
+- 活动文案
+- 生活指南
 
-Do not write Suiyuan as pure nostalgia. It should remain connected to present-day student movement and use.
+### 第二步：确认场景归属
 
-### 3. NSTI-style question writing
+判断文本更偏向：
 
-Each question should contain:
+- 随园
+- 仙林
+- 紫金
+- 跨校区
 
-- one campus scene
-- one natural decision point
-- one meaningful contrast in preference
+如果是跨校区内容，不要平均分配笔墨，而要写出各校区分工和气质差异。
 
-Good options are all plausible. They should feel like different habits, not one correct answer plus three distractions.
+### 第三步：把抽象表达改成具体动作
 
-Avoid direct reuse of textbook MBTI wording. Rebuild the contrast through campus action.
+一段校园文案最好至少落到下面三样中的两样：
 
-### 4. Result-card writing
+- 一个地方
+- 一个动作
+- 一种真实的节奏或心态
 
-A good result card usually includes:
+例如不要只写：
 
-- one concise type feeling
-- one paragraph on likely campus rhythm
-- one paragraph on interaction or collaboration style
+> 你是一个有规划的人。
 
-Keep it readable. The user should feel "this sounds like me," not "this sounds like a report."
+更适合改成：
 
-### 5. Student project descriptions
+> 你通常会先把这周要交的东西、要去的地方和大概的时间顺下来，再按自己的节奏一点点推进。
 
-When the user is describing their own project:
+### 第四步：补生活信息背景
 
-- put the original observation and idea on the user side
-- put organization, polishing, prompting, generation, coding, and iteration on the tool side
+如果文本里需要涉及：
 
-This is especially important for competition material, process writeups, and project narratives.
+- 校园卡
+- 校车 / 班车
+- 食堂
+- 宿舍
+- 报修
+- 校内服务入口
 
-## Output preferences
+就不要凭空想象，要优先读取 `references/校园生活信息.md`。
 
-When useful, provide:
+### 第五步：做“去 AI 味”检查
 
-- one main version
-- one slightly more restrained version
-- one slightly more literary version
+重点检查：
 
-When revising, explicitly optimize for:
+- 有没有空泛抒情
+- 有没有句句都像宣传语
+- 有没有把学生生活写得太概念化
+- 有没有把用户创意写成 AI 创意
 
-- more specific
-- more campus-like
-- less generic
-- less AI-smoothed
+## 输出风格规则
 
-## Optional reference
+### 推荐保留的表达特征
 
-If you need a compact scene bank and tone guide, read `references/voice-and-scenes.md`.
+- 从“先看到什么”开始写
+- 多写经过、停留、等待、商量、赶去、放慢脚步
+- 少写抽象标签，多写行为偏好
+- 允许一点文学性，但不要句句都文学
+
+### 推荐使用的词
+
+- 草地
+- 回廊
+- 坡道
+- 图书馆
+- 校车
+- 群聊
+- 招新点
+- 路口
+- 宿舍楼
+- 自习位
+- 食堂
+- 夜里回去的路
+
+### 尽量减少的模板味表达
+
+- 青春答卷
+- 灵魂底色（高频重复时）
+- 治愈一切
+- 更好的自己
+- 每一步都闪闪发光
+
+如果一句话去掉这些词就空了，说明它本身还不够扎实。
+
+## 写题目时
+
+每道题尽量满足：
+
+- 有一个明确校园场景
+- 有一个自然发生的选择点
+- 选项都像真人会选的
+- 不直接把人格术语塞进选项里
+
+具体规则见：
+
+- `references/题面生成规则.md`
+
+## 写项目说明时
+
+如果文本涉及项目创作过程，要明确区分：
+
+- 用户做了什么：观察、想法、选题、题目方向、创意提出
+- 工具做了什么：润色、结构化、提示词优化、代码实现、页面生成、方案补充
+
+## 知识库使用方法
+
+这个 skill 的知识库不是一次性全读，而是按任务取用：
+
+- 要写学校整体背景：看 `references/知识库总览.md`
+- 要区分随园 / 仙林 / 紫金：看 `references/三校区语境.md`
+- 要写班车、食堂、校园卡、报修等：看 `references/校园生活信息.md`
+- 要写题目和结果卡：看 `references/题面生成规则.md`
+
+## 最终检查清单
+
+输出前检查：
+
+- 是否保留了用户作为创意提出者的位置
+- 是否真的有校园场景，而不是空泛感慨
+- 是否区分了随园、仙林、紫金
+- 是否避免了过强的 AI 模板味
+- 是否没有冒充学校官方口径
